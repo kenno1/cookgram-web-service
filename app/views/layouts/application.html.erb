@@ -24,7 +24,7 @@
     <% end %>
     
     <nav class="navbar is-warning">
-    
+
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
           <h1 class="title is-4" style="font-family: cursive;">recipegram</h1>
@@ -42,6 +42,9 @@
             <div class="navbar-item">
               <div class="field is-grouped">
                 <p class="control">
+                  <%= link_to "クックグラマー一覧", users_path, class: "button is-warning is-light" %>
+                </p>
+                <p class="control">
                   <%= link_to "マイページ", user_path(current_user), class: "button is-warning is-light" %>
                 </p>
                 <p class="control">
@@ -56,6 +59,9 @@
           <div class="navbar-end">
             <div class="navbar-item">
               <div class="field is-grouped">
+                <p class="control">
+                  <%= link_to "クックグラマー一覧", users_path, class: "button is-warning is-light" %>
+                </p>
                 <p class="control">
                   <%= link_to "ログイン", new_user_session_path, class: "button is-warning is-light" %>
                 </p>
