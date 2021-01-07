@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate_user!, except: [:index]
   def index
     @recipes = Recipe.all
   end
@@ -33,7 +34,7 @@ class RecipesController < ApplicationController
     recipe.destroy
     redirect_to recipes_path
   end
-  
+
   private
   def recipe_params
     params.require(:recipe).permit(:title, :body, :image)
